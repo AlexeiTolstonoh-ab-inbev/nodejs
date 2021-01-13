@@ -71,10 +71,10 @@
           description: arrayDescription[Math.floor(Math.random() * (arrayDescription.length))],
           photos: arrayPhotos[Math.floor(Math.random() * (arrayPhotos.length))]
         },
-        locations: {
-          x: locations[i].x,
-          y: locations[i].y
-        },
+        // locations: {
+        //   x: locations[i].x,
+        //   y: locations[i].y
+        // },
         id: i
       });
     }
