@@ -1,7 +1,7 @@
 const fs = require('fs')
 module.exports = class Offers {
 constructor(fileName = '') {
-this.fileName = fileName
+    this.fileName = fileName
     this.offers = []
 }
 generateData(){
