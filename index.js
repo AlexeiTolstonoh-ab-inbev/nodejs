@@ -12,7 +12,6 @@ rl.question("Do you want to generate data ? ", function(unswer) {
         rl.question("How march data do you want to create ? ", function (count) {
             console.log(`we need to create ${count} objects`)
             const arrayOfData = data.randomPinsArray(new Number(count))
-            console.log(arrayOfData)
             rl.question("Input path to file? ", function (path) {
                 console.log(`You path ${path}`)
 
