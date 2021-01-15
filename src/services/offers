@@ -1,0 +1,21 @@
+
+module.exports = class Offers {
+constructor(fileName = '') {
+this.fileName = fileName
+    this.offers = []
+}
+getAllOffers(){
+    return this.offers
+}
+getOffersById(id){
+   return  this.offers.find(el => el.id === id)
+}
+postOffer(data){
+    data.id = this.offers.length
+    this.offers.push(data)
+    return
+}
+deleteOffer(id){
+this.offers.filter(el => el.id != id)
+}
+    }

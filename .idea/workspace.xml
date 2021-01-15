@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61cfc4b8-3575-4eca-ae3f-521c86bfce4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/offers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/offers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.js" beforeDir="false" afterPath="$PROJECT_DIR$/file.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +72,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="419" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610390149022">
+    <state x="419" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610699612934">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="419" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1610390149022" />
+    <state x="419" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1610699612934" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1610443529697">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
