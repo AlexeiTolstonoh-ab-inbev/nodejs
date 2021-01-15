@@ -47,7 +47,7 @@ postOffer(data){
     return
 }
 deleteOffer(id){
-const filteredOffers = this.offers.filter(el => el.id != new Number(id))
+    const filteredOffers = this.offers.filter(el => el.id != new Number(id))
     this.offers = filteredOffers
 }
     }
