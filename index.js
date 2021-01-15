@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const offerRoute = require('./src/controllers/offers')
 
 serverApp.use(bodyParser.json())
+serverApp.use(express.urlencoded({ extended: false }));
 
 serverApp.use('/offers', offerRoute)
 
