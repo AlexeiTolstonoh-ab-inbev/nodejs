@@ -26,7 +26,7 @@
   // форма блока отправки обьявления
   var noticeBlockForm = noticeBlock.querySelector('.ad-form');
   //  добаления атрабута ACTION
-  noticeBlockForm.action = 'https://js.dump.academy/keksobooking';
+  noticeBlockForm.action = 'http://localhost:3030/offers/';
 
   //  добавляем всем филдсетам disabled=true
   window.changeElementDisabledAtribute(formFiltersFieldsets, true);

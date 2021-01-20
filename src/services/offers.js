@@ -19,11 +19,11 @@ module.exports = class Offers {
     getOffersById(id) {
         const getId = Number(id)
         const offer = this.offers.find(el => el.id === getId)
+        console.log(offer)
         return offer
     }
 
     updateOffer(id, data) {
-        const indexOfNewOffer = this.offers.findIndex(el => el.id)
         this.offers[id] = {
             author: {
                 avatar: data.author.avatar
@@ -53,27 +53,27 @@ module.exports = class Offers {
     }
 
     postOffer(data) {
+        const loc = data.address.split(',')
+        console.log(loc)
         const newOffer = {
             author: {
-                avatar: data.author.avatar || ''
+                avatar: data.avatar || ''
             },
             offer: {
-                title: data.offer.title,
-                address: [
-                    {
-                        x: data.offer.address.y,
-                        y: data.offer.address.y
-                    }
-                ],
-                price: data.offer.price,
-                type: data.offer.type,
-                rooms: data.offer.rooms,
-                guests: data.offer.guests,
-                checkin: data.offer.checkin,
-                checkout: data.offer.checkout,
-                features: data.offer.features,
-                description: data.offer.description,
-                photos: data.offer.photos
+                title: data.title,
+                    location: {
+                x: loc[0],
+                y: loc[1]
+                                },
+                price: data.price,
+                type: data.type,
+                rooms: data.rooms,
+                guests: data.guests,
+                checkin: data.checkin,
+                checkout: data.checkout,
+                features: data.features,
+                description: data.description,
+                photos: data.photos || ``
             },
             id: this.offers.length
         }
@@ -84,18 +84,14 @@ module.exports = class Offers {
     deleteOffer(id) {
         const filteredOffers = this.offers.filter(el => el.id != new Number(id))
         this.offers = filteredOffers
+        return this.offers
     }
-    isIdExist(id){
+
+    isIdExist(id) {
         const getId = Number(id)
-        const ids = this.offers.map( el => el.id)
+        const ids = this.offers.map(el => el.id)
         const isInclude = ids.includes(getId)
+        console.log(isInclude)
         return isInclude
-    }
-    isCorrectObject (data) {
-        const errors = []
-        if(data.offer.title.split('').length < 30) {errors.push('Title length must bee more then 30')}
-        if(data.offer.address.y <= 0 && data.offer.address.y > 0) {errors.push('missing Y-coordinate')}
-        if(data.offer.address.x <= 0 && data.offer.address.x > 0) {errors.push('missing X-coordinate')}
-        if(data.offer.price < 0) {errors.push('Price cant bee less then 0')}
     }
 }
