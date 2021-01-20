@@ -22,8 +22,9 @@ offerRouter.get('/:id',(req, res) => {
 })
 
 offerRouter.post('/',
-    // body(`title`).isLength({min: 30 , max: 100}),
-    // body(`price`).isFloat({min: 0, max: 1000000}),
+    body(`title`).isLength({min: 30 , max: 100}),
+    body(`price`).isFloat({min: 0, max: 1000000}),
+    body('description').isLength({min: 10 , max: 100}),
     (req, res) => {
     const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -31,8 +32,6 @@ offerRouter.post('/',
         } else {
             console.log(req.files)
             console.log(req.body)
-            console.log(req.files['avatar'][0])
-            console.log(req.files['gallery'])
             console.log(req)
 
             offerService.postOffer(req.body)
