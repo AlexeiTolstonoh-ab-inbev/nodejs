@@ -13,13 +13,17 @@ const shema = new Schema({
         guests: Number,
         checkin: String,
         checkout: String,
-        features: [[String]],
+        features: [String],
         description: String,
-        photos: [[String]]
+        photos: [String]
     },
         location: {
             x: Number,
             y: Number
     }
-})
+},
+    {
+        typeKey: String
+    }
+)
 module.exports = mongoose.model('OfferModel',shema )

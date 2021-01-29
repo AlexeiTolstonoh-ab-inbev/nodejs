@@ -10,22 +10,6 @@ const multer = require('multer')
 const expressHbs = require('express-handlebars')
 const hbs = require('hbs')
 require('./db/index')
-// const OffersModel = require('./db/models/offers')
-
-// const offer = new OffersModel({
-//     name: 'Film 2020',
-//     year: 2020
-// });
-//
-// offer.save(function (err) {
-//     if (err) console.log(err);
-//     console.log('done')
-// });
-
-
-
-
-
 
 const storageConfig = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -44,10 +28,8 @@ cpUpload = upload.fields([{ name: 'avatar', maxCount: 1 }, { name: 'images', max
 serverApp.use(cors())
 serverApp.use(bodyParser.urlencoded({ extended: false }))
 serverApp.use(bodyParser.json())
-
 serverApp.use(express.static(path.join(__dirname, 'pablic')))
 
-// устанавливаем настройки для файлов layout
 serverApp.engine("hbs", expressHbs(
     {
         layoutsDir: "views/layouts",

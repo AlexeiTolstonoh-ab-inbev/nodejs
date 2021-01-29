@@ -2,8 +2,6 @@ const express = require('express')
 const offerRouter = express.Router()
 const Offers = require('../services/offers')
 const offerService = new Offers()
-const { body, validationResult } = require('express-validator');
-const OffersModel = require('../../db/models/offers')
 
 offerService.generateData()
 
@@ -17,7 +15,6 @@ offerRouter.get('/:id',async (req, res) => {
     console.log(id)
         const offer = await offerService.getOffersById(id)
         res.json(offer)
-
 })
 
 offerRouter.post('/',async (req, res) => {
@@ -36,7 +33,6 @@ offerRouter.put('/:id', async (req, res) => {
         const {id} = req.params
         const body = req.body
        await offerService.updateOffer(id, body)
-        const offers = offerService.getAllOffers()
-        res.json(offers)
+        res.json(`Changed`)
 })
 module.exports = offerRouter;
